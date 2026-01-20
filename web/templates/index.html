@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant - AI Powered</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="server-icon">
+                <div class="server-icon-inner">🎙️</div>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="server-info">
+                    <h2>Voice Assistant</h2>
+                    <p class="server-subtitle">AI Powered</p>
+                </div>
+                
+                <div class="connection-status-sidebar" id="connectionStatusSidebar">
+                    <div class="status-indicator" id="statusIndicator"></div>
+                    <span id="connectionText">Connecting...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-content">
+                    <h1># voice-assistant</h1>
+                    <p class="header-description">AI-powered voice and text assistant</p>
+                </div>
+            </div>
+
+            <!-- Messages Container -->
+            <div class="messages-container" id="conversation">
+                <div class="welcome-message">
+                    <div class="welcome-icon">👋</div>
+                    <h3>Welcome to Voice Assistant!</h3>
+                    <p>Start a conversation by clicking the microphone or typing a message below.</p>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <!-- Voice Recording Button -->
+                    <button id="recordBtn" class="voice-btn" title="Record Voice">
+                        <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                        </svg>
+                    </button>
+
+                    <!-- Text Input -->
+                    <div class="text-input-container">
+                        <input 
+                            type="text" 
+                            id="textInput" 
+                            placeholder="Message # voice-assistant" 
+                            class="text-input"
+                        />
+                        <div id="recordingIndicator" class="recording-indicator hidden">
+                            <div class="pulse-dot"></div>
+                            <span>Recording...</span>
+                        </div>
+                    </div>
+
+                    <!-- Send Button -->
+                    <button id="sendTextBtn" class="send-btn" title="Send Message">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player (hidden) -->
+    <audio id="audioPlayer" controls class="hidden"></audio>
+
+    <!-- Configure API Base URL -->
+    <script>
+        // Set backend API URL (default: http://localhost:8000)
+        window.API_BASE_URL = window.API_BASE_URL || 'http://localhost:8000';
+    </script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
