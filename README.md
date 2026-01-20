@@ -2,6 +2,21 @@
 
 A complete Voice Assistant application using Transformer architectures with Whisper (speech-to-text), BERT (intent classification), and GPT (response generation). Now available as a modern web application!
 
+## 📸 Demo
+
+![Voice Assistant Demo](screenshots/demo.png)
+
+**Discord-like Professional Interface**
+
+The application features a modern, Discord-inspired dark theme with:
+- **Left Sidebar**: Server icon, connection status, and server information
+- **Main Chat Area**: Clean message bubbles with avatars, timestamps, and intent badges
+- **Voice & Text Input**: Seamless recording and typing capabilities
+- **Real-time Processing**: Loading indicators during AI processing
+- **Audio Playback**: Listen to AI-generated responses
+
+*To add your screenshot: Take a screenshot of the running application and save it as `screenshots/demo.png`*
+
 ## 🌟 Features
 
 ✅ **Voice Input Recording** - Record audio directly in your browser  
